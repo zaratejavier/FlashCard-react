@@ -1,0 +1,2 @@
+class AddResultToCardsController < ApplicationController
+end

@@ -1,0 +1,2 @@
+class AddResultToCard < ApplicationRecord
+end
