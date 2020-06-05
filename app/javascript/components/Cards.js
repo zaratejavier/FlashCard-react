@@ -11,20 +11,26 @@ class Cards extends React.Component {
     }
   }
 
-  // deleteCard(id){
-  //   console.log("delete clicked hahha")
-  //   console.log(id)
+  deleteCard(id){
+    console.log("delete clicked hahha")
+    console.log(id)
 
-  //   axios
-  //   .delete(`/cards/${id}`)
-  //   .then((response) => {
-  //     console.log(response);
-  //     console.log(response.data);
-  //     const newCards = this.state.cards.filter((card) =>{
-  //       return card.id != id;
-  //     })
-  //   })
-  // }
+    axios
+    .delete(`/cards/${id}`)
+    .then((response) => {
+      console.log(response);
+      console.log(response.data);
+      const newCards = this.state.cards.filter((card) =>{
+        return card.id != id;
+      })
+      this.setState({
+        cards: newCards,
+      })
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+  }
 
 
   renderCards(){
