@@ -4,7 +4,8 @@ class Card extends React.Component {
   render () {
     return (
       <div>
-          {this.props.card.result}
+          <h1>{this.props.card.result}</h1>
+          <br/>
           <a href="/">Home</a>
       </div>
     );
