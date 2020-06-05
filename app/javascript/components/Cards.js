@@ -18,13 +18,12 @@ class Cards extends React.Component {
     axios
     .delete(`/cards/${id}`)
     .then((response) => {
-      console.log(response);
-      console.log(response.data);
-      const newCards = this.state.cards.filter((card) =>{
+      console.log(response.data); // shows the data in console
+      const newCards = this.state.cards.filter((card) =>{ // deletes the card
         return card.id != id;
       })
       this.setState({
-        cards: newCards,
+        cards: newCards, // updates the state
       })
     })
     .catch((err) => {
@@ -42,6 +41,8 @@ class Cards extends React.Component {
         {`${card.name}`}
 
         <div onClick={() => this.deleteCard(card.id)}>Remove</div>
+
+        <a href={`/cards/${card.id}`}>Show</a>
       </li>
     ))
   }

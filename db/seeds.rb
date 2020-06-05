@@ -7,9 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-require "faker"
+# require "faker"
 
-  25.times do
-    card_name = Faker::Nation.language
-    Card.create(name: card_name)
-  end
+#   25.times do
+#     card_name = Faker::Nation.language
+#     Card.create(name: card_name)
+#   end
+
+  Card.create(name: "What is the tallest mountain", result: "Mt Everest")
+  Card.create(name: "Who is the CEO of Amazon", result: "Jeff Bezos")
+  Card.create(name: "who is the ceo of microsoft", result: "Bill gates")
